@@ -1,0 +1,100 @@
+<section class="container create-notes ff-inter">
+  <header class="header">
+    <h2>
+      Adicione um <br />
+      pensamento novo:
+    </h2>
+  </header>
+  <form>
+    <label for="note">Note:</label>
+    <input
+      type="textarea"
+      class="input"
+      id="note"
+      name="note"
+      placeholder="Enter a note"
+      [(ngModel)]="note.content"
+    />
+  </form>
+  <form>
+    <label for="authorship">Authorship or source:</label>
+    <input
+      type="text"
+      class="input"
+      id="authorship"
+      name="authorship"
+      placeholder="Enter authorship or source"
+      [(ngModel)]="note.authorship"
+    />
+  </form>
+  <form>
+    <label for="model">Select a card model</label>
+    <div class="container-radio">
+      <div class="radio-model">
+        <label for="model1">
+          <input type="radio" id="model1" value="model1" name="model-card" />
+          <div class="custom-radio">
+            <span></span>
+          </div>
+          <span>model 1</span>
+        </label>
+        <div class="radio-model">
+          Prévia:
+          <div class="model model1 ff-roboto-mono">
+            <img src="../../../../assets/img/modelo1.png" alt="Quotation blue" />
+            <p class="content">{{ note.content }}</p>
+            <p class="authorship">
+              <b>{{ note.authorship }}</b>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container-radio">
+        <div class="radio-model">
+          <label for="model2">
+            <input type="radio" id="model2" value="model2" name="model-card" />
+            <div class="custom-radio">
+              <span></span>
+            </div>
+            <span>model 2</span>
+          </label>
+          <div class="radio-model">
+            Prévia:
+            <div class="model model2 ff-roboto-mono">
+              <img src="../../../../assets/img/modelo2.png" alt="Quotation light-blue" />
+              <p class="content">{{ note.content }}</p>
+              <p class="authorship">
+                <b>{{ note.authorship }}</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      <div class="container-radio">
+        <div class="radio-model">
+          <label for="model3">
+            <input type="radio" id="model3" value="model3" name="model-card" />
+            <div class="custom-radio">
+              <span></span>
+            </div>
+            <span>model 3</span>
+          </label>
+          <div class="radio-model">
+            Prévia:
+            <div class="model model3 ff-roboto-mono">
+              <img src="../../../../assets/img/modelo3.png" alt="Quotation green" />
+              <p class="content">{{ note.content }}</p>
+              <p class="authorship">
+                <b>{{ note.authorship }}</b>
+              </p>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="actions">
+        <button (click)="createNote()" class="button">Save</button>
+        <button (click)="cancel()" routerLink=".listNotes" class="button">Cancel</button>
+    </div>
+  </form>
+</section>
