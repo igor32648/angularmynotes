@@ -9,6 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { NoteComponent } from './components/notes/note/note.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DeleteNoteComponent } from './components/notes/delete-note/delete-note.component';
+import { EditNoteComponent } from './components/notes/edit-note/edit-note.component';
 
 @NgModule({
   declarations: [
@@ -16,12 +20,16 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     CreateNoteComponent,
-    ListNotesComponent
+    ListNotesComponent,
+    NoteComponent,
+    DeleteNoteComponent,
+    EditNoteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

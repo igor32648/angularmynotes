@@ -32,7 +32,8 @@
     <div class="container-radio">
       <div class="radio-model">
         <label for="model1">
-          <input type="radio" id="model1" value="model1" name="model-card" />
+          <input type="radio" id="model1" value="model1" name="model-card"
+          [(ngModel)]="note.model" />
           <div class="custom-radio">
             <span></span>
           </div>
@@ -41,7 +42,7 @@
         <div class="radio-model">
           Prévia:
           <div class="model model1 ff-roboto-mono">
-            <img src="../../../../assets/img/modelo1.png" alt="Quotation blue" />
+            <img src="../../../../assets/img/model1.png" alt="Quotation blue" />
             <p class="content">{{ note.content }}</p>
             <p class="authorship">
               <b>{{ note.authorship }}</b>
@@ -52,7 +53,8 @@
       <div class="container-radio">
         <div class="radio-model">
           <label for="model2">
-            <input type="radio" id="model2" value="model2" name="model-card" />
+            <input type="radio" id="model2" value="model2" name="model-card" 
+            [(ngModel)]="note.model"/>
             <div class="custom-radio">
               <span></span>
             </div>
@@ -61,7 +63,7 @@
           <div class="radio-model">
             Prévia:
             <div class="model model2 ff-roboto-mono">
-              <img src="../../../../assets/img/modelo2.png" alt="Quotation light-blue" />
+              <img src="../../../../assets/img/model2.png" alt="Quotation light-blue" />
               <p class="content">{{ note.content }}</p>
               <p class="authorship">
                 <b>{{ note.authorship }}</b>
@@ -72,7 +74,8 @@
       <div class="container-radio">
         <div class="radio-model">
           <label for="model3">
-            <input type="radio" id="model3" value="model3" name="model-card" />
+            <input type="radio" id="model3" value="model3" name="model-card"
+            [(ngModel)]="note.model" />
             <div class="custom-radio">
               <span></span>
             </div>
@@ -81,7 +84,7 @@
           <div class="radio-model">
             Prévia:
             <div class="model model3 ff-roboto-mono">
-              <img src="../../../../assets/img/modelo3.png" alt="Quotation green" />
+              <img src="../../../../assets/img/model3.png" alt="Quotation green" />
               <p class="content">{{ note.content }}</p>
               <p class="authorship">
                 <b>{{ note.authorship }}</b>

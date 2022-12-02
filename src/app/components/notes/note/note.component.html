@@ -1,0 +1,15 @@
+<div class="note">
+<div class="model {{ note.model }} ff-roboto-mono" [ngClass]="noteWidth()">
+    <img src="/assets/img/{{ note.model }}.png" alt="Aspas coloridas">
+    <p class="content">{{ note.content }}</p>
+    <p class="authorship"><b>{{ note.authorship }}</b></p>
+    <div class="actions">
+        <button class="button-edit" routerLink="/notes/editNote/{{ note.id }}" >
+            <img src="/assets/img/icone-editar.png" alt="Ícone de editar">
+        </button>
+        <button class="button-delete" routerLink="/notes/deleteNote/{{ note.id  }}">
+            <img src="/assets/img/icone-excluir.png"  alt="Ícone de excluir">
+        </button>
+    </div>
+</div>
+</div>
