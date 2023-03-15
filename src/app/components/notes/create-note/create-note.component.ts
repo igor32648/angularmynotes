@@ -20,7 +20,7 @@ constructor(private service: NoteService,  private router: Router) {}
 
 createNote() {
  this.service.create(this.note).subscribe(() => {
-  this.router.navigate(['listNotes'])
+  this.router.navigate(['/listNotes'])
  })
 }
 cancel(){

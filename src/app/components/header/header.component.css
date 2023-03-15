@@ -1,9 +1,11 @@
 .header {
-  background: url(/assets/img/fundo-cabecalho.png);
+  background-color: #f2bdbd;
   background-size: cover;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .header .logo {
@@ -18,12 +20,16 @@
 }
 
 .header .image {
-  width: 40%;
+  width: 30%;
 }
 
 .header p {
-  font-size: 2rem;
-  color: #6bd1ff;
+  font-size: medium;
+  color: #686868;
+}
+
+.header p .image {
+  width: 10%;
 }
 
 @media (max-width: 576px) {
@@ -41,5 +47,17 @@
   }
   .header .image {
     display: none;
+    width: 10%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .header-g {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 426px) {
+    .header-p {
+      width: 100%;
+    }
   }
 }

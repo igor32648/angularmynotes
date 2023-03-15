@@ -3,9 +3,14 @@
         <h2 class="ff-inter">My Wall</h2>
         <button routerLink="/createNote" class="button">Add Note</button>
     </header>
-    <div class="wall">
+    <div class="wall" *ngIf="notesList.length > 0, else noNotes">
         <div *ngFor="let note of notesList">
         <app-note [note]="note"></app-note>
     </div>
     </div>
 </section>
+<ng-template #noNotes>
+  <div class="ff-inter no-notes">
+    <p>There are no notes registered yet!</p>
+  </div>
+</ng-template>
