@@ -1,13 +1,16 @@
 .actions {
-    display: flex;
-    justify-content: flex-end
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 
   .button-delete {
     border: none;
     cursor: pointer;
     margin-left: 5px;
     margin-top: 10px;
+    background-color: transparent;
   }
 
   .button-edit {
@@ -15,33 +18,71 @@
     cursor: pointer;
     margin-right: 10px;
     margin-top: 10px;
+    background-color: transparent;
   }
 
   .note {
-    background-color: #F8F9FE;
+    background-color: transparent;
     padding: 1rem;
-    box-sizing: border-box;
+    margin: 0.3125rem 0 0.1rem;
+    max-width: 15.625rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+  .paper {
+    width: 90%;
+    height: 90%s;
+    position: relative;
+    margin: 20px auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px #888;
   }
 
-  .note .content {
+  /* styling red vertical line */
+  .paper::before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 40px;
+    background-color: rgba(255,0,0,0.6);
+  }
+
+  /* styling blue horizontal lines */
+  .pattern {
+    height: 100%;
+    background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+  }
+
+  /* styling text content */
+  .content {
+    padding-top: 6px;
+    padding-left: 56px;
+    padding-right: 16px;
+    line-height: 25px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 19px;
+    letter-spacing: 1px;
+    word-spacing: 5px;
+  };
+
+  .note .text {
     margin: 1rem auto;
-    word-wrap: break-word;
+    word-wrap:break-word;
   }
 
   .note .authorship {
     word-wrap: break-word;
   }
 
-  .model1 {
-    box-shadow: 8px 8px 0px #154580;
-  }
-
-  .model2 {
-    box-shadow: 8px 8px 0px #6BD1FF;
-  }
-
-  .model3 {
-    box-shadow: 8px 8px 0px #84EEC1;
+  .radio {
+    margin: 0;
   }
 
   .note-g {

@@ -27,76 +27,29 @@
     />
   </form>
   <form>
-    <label for="model">Select a card model</label>
     <div class="container-radio">
-      <div class="radio-model">
-        <label for="model1">
-          <input type="radio" id="model1" value="model1" name="model-card"
-          [(ngModel)]="note.model" />
-          <div class="custom-radio">
-            <span></span>
-          </div>
-          <span>model 1</span>
-        </label>
         <div class="radio-model">
-          Prévia:
-          <div class="model model1 ff-roboto-mono">
-            <img src="../../../../assets/img/model1.png" alt="Quotation blue" />
-            <p class="content">{{ note.content }}</p>
-            <p class="authorship">
-              <b>{{ note.authorship }}</b>
-            </p>
+          <label>Prévia:</label>
+          <div class="note">
+            <div class="ff-roboto-mono">
+              <div class="paper">
+                <div class="pattern">
+                  <div class="content">
+                    <p class="text">{{ note.content }}</p>
+                    <p class="authorship">
+                      <b>{{ note.authorship }}</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              </div>
           </div>
-        </div>
-      </div>
-      <div class="container-radio">
-        <div class="radio-model">
-          <label for="model2">
-            <input type="radio" id="model2" value="model2" name="model-card"
-            [(ngModel)]="note.model"/>
-            <div class="custom-radio">
-              <span></span>
-            </div>
-            <span>model 2</span>
-          </label>
-          <div class="radio-model">
-            Prévia:
-            <div class="model model2 ff-roboto-mono">
-              <img src="../../../../assets/img/model2.png" alt="Quotation light-blue" />
-              <p class="content">{{ note.content }}</p>
-              <p class="authorship">
-                <b>{{ note.authorship }}</b>
-              </p>
-            </div>
-          </div>
-        </div>
-      <div class="container-radio">
-        <div class="radio-model">
-          <label for="model3">
-            <input type="radio" id="model3" value="model3" name="model-card"
-            [(ngModel)]="note.model" />
-            <div class="custom-radio">
-              <span></span>
-            </div>
-            <span>model 3</span>
-          </label>
-          <div class="radio-model">
-            Prévia:
-            <div class="model model3 ff-roboto-mono">
-              <img src="../../../../assets/img/model3.png" alt="Quotation green" />
-              <p class="content">{{ note.content }}</p>
-              <p class="authorship">
-                <b>{{ note.authorship }}</b>
-              </p>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
     </div>
+  </div>
     <div class="actions">
         <button (click)="createNote()" class="button">Save</button>
         <button (click)="cancel()" routerLink=".listNotes" class="button">Cancel</button>
     </div>
+
   </form>
 </section>
